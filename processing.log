@@ -1,0 +1,68 @@
+[2025-05-21 04:10:37] INFO: --- Application Start ---
+[2025-05-21 04:10:37] INFO: Log file 'processing.log' initialized.
+[2025-05-21 04:10:37] INFO: Ensuring upload folder 'uploaded_files' exists...
+[2025-05-21 04:10:37] INFO: Upload folder 'uploaded_files' check complete. Exists: True
+[2025-05-21 04:10:37] INFO: Clearing contents of upload folder: uploaded_files
+[2025-05-21 04:10:37] INFO: Upload folder 'uploaded_files' cleared.
+[2025-05-21 04:10:37] INFO: Clearing ChromaDB directory: chroma_db
+[2025-05-21 04:10:37] INFO: ChromaDB directory 'chroma_db' did not exist to clear.
+[2025-05-21 04:10:37] INFO: Initializing ChromaDB client at path: chroma_db
+[2025-05-21 04:10:37] INFO: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-05-21 04:10:39] INFO: ChromaDB client initialized successfully.
+[2025-05-21 04:10:39] INFO: Initializing Ollama embeddings with model 'llama3.2' and base URL 'http://localhost:11434'...
+[2025-05-21 04:10:39] INFO: Initializing ChromaDBEmbeddingFunction...
+[2025-05-21 04:10:39] INFO: ChromaDBEmbeddingFunction initialized.
+[2025-05-21 04:10:39] INFO: Ollama embeddings and custom embedding function initialized.
+[2025-05-21 04:10:39] INFO: Initializing Ollama LLM with model 'llama3.2' and base URL 'http://localhost:11434'...
+[2025-05-21 04:10:40] INFO: Ollama LLM initialized successfully.
+[2025-05-21 04:10:40] INFO: Initializing Chroma vectorstore...
+[2025-05-21 04:10:40] INFO: Chroma vectorstore initialized successfully.
+[2025-05-21 04:10:40] INFO: Initializing RAG chain...
+[2025-05-21 04:10:40] INFO: RAG chain initialized successfully.
+[2025-05-21 04:10:40] INFO: Attempting to get or create ChromaDB collection 'rag_collection'...
+[2025-05-21 04:10:40] INFO: Successfully got or created collection 'rag_collection'. Current count: 0
+[2025-05-21 04:10:40] INFO: Defining Gradio UI...
+[2025-05-21 04:10:40] INFO: Listing files in upload folder: uploaded_files
+[2025-05-21 04:10:40] INFO: Finished listing files. Found 0 valid PDFs.
+[2025-05-21 04:10:40] INFO: Setting up file management tab button actions...
+[2025-05-21 04:10:40] INFO: File management tab button actions configured.
+[2025-05-21 04:10:40] INFO: Setting up chatbot tab button actions...
+[2025-05-21 04:10:40] INFO: Chatbot tab button actions configured.
+[2025-05-21 04:10:40] INFO: Gradio UI definition complete.
+[2025-05-21 04:10:40] INFO: Preparing to launch Gradio application...
+[2025-05-21 04:10:40] INFO: Launching Gradio application...
+[2025-05-21 04:10:41] INFO: HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+[2025-05-21 04:10:41] INFO: HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+[2025-05-21 04:10:42] INFO: HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+[2025-05-21 04:11:07] INFO: Starting file upload process. Received 0 file objects.
+[2025-05-21 04:11:07] WARNING: Upload function called with no files selected.
+[2025-05-21 04:11:07] INFO: Listing files in upload folder: uploaded_files
+[2025-05-21 04:11:07] INFO: Finished listing files. Found 0 valid PDFs.
+[2025-05-21 10:13:19] INFO: Starting file upload process. Received 1 file objects.
+[2025-05-21 10:13:19] INFO: Processing upload: Original filename 'Jazib-Resume DS-ML.pdf', temporary path 'C:\Users\HP\AppData\Local\Temp\gradio\7927a8e9c6f8f8f96643954b508c50c613a98f9e813fee51107760277cfcba00\Jazib-Resume DS-ML.pdf'
+[2025-05-21 10:13:19] INFO: Saving uploaded file to: uploaded_files\6f4058ed_Jazib-Resume DS-ML.pdf
+[2025-05-21 10:13:20] INFO: Successfully saved uploaded file: Jazib-Resume DS-ML.pdf as 6f4058ed_Jazib-Resume DS-ML.pdf
+[2025-05-21 10:13:20] INFO: Finished file upload process. Saved 1 files.
+[2025-05-21 10:13:20] INFO: Listing files in upload folder: uploaded_files
+[2025-05-21 10:13:20] INFO: Finished listing files. Found 1 valid PDFs.
+[2025-05-21 10:13:33] INFO: Starting batch processing for all uploaded files...
+[2025-05-21 10:13:33] INFO: Listing files in upload folder: uploaded_files
+[2025-05-21 10:13:33] INFO: Finished listing files. Found 1 valid PDFs.
+[2025-05-21 10:13:33] INFO: Found 1 files to process in batch.
+[2025-05-21 10:13:33] INFO: Beginning processing loop for 1 files...
+[2025-05-21 10:13:33] INFO: --- Processing file: 6f4058ed_Jazib-Resume DS-ML.pdf ---
+[2025-05-21 10:13:33] INFO: Starting processing for PDF file: uploaded_files\6f4058ed_Jazib-Resume DS-ML.pdf
+[2025-05-21 10:13:33] INFO: Starting text extraction from PDF: uploaded_files\6f4058ed_Jazib-Resume DS-ML.pdf
+[2025-05-21 10:13:34] INFO: Finished text extraction from uploaded_files\6f4058ed_Jazib-Resume DS-ML.pdf. Total 7 chunks extracted.
+[2025-05-21 10:13:34] INFO: Extraction returned 7 chunks for uploaded_files\6f4058ed_Jazib-Resume DS-ML.pdf.
+[2025-05-21 10:13:34] INFO: Preparing to add 7 chunks to ChromaDB for 6f4058ed_Jazib-Resume DS-ML.pdf.
+[2025-05-21 10:13:34] INFO: Adding 7 chunks to ChromaDB...
+[2025-05-21 10:13:34] INFO: Generating embeddings for input...
+[2025-05-21 10:17:27] INFO: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+[2025-05-21 10:17:27] INFO: Successfully generated embeddings for 7 documents.
+[2025-05-21 10:17:28] INFO: Successfully added 7 chunks to ChromaDB.
+[2025-05-21 10:17:28] INFO: Successfully processed and added 7 chunks from 6f4058ed_Jazib-Resume DS-ML.pdf
+[2025-05-21 10:17:28] INFO: Finished processing for PDF file: uploaded_files\6f4058ed_Jazib-Resume DS-ML.pdf
+[2025-05-21 10:17:28] INFO: Processing result for 6f4058ed_Jazib-Resume DS-ML.pdf: Chunks added = 7, Message = 'Successfully processed and added 7 chunks from 6f4058ed_Jazib-Resume DS-ML.pdf'
+[2025-05-21 10:17:28] INFO: Batch processing complete. Successfully processed: 1 files (7 chunks added). Skipped/Failed: 0 files.
+[2025-05-21 10:56:16] INFO: Gradio application launched (or launch attempt completed).
